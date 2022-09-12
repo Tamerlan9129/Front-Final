@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.author-table {
+  padding: 200px 0;
+  width: 80%;
+  margin: 0 auto;
+
+  td {
+    padding: 0 20px;
+  }
+}
+.wrapper {
+  width: 100%;
+}
+#boook-table-container {
+  padding: 200px 0;
+  margin: 0 auto;
+  width: 80%;
+  td {
+    padding: 0 20px;
+  }
+}
+#user-table-container {
+  //   background-color: red;
+  width: 60%;
+  margin: 0 auto;
+  table {
+    width: 100%;
+  }
+}
+
+.wrap {
+  max-width: 90vw;
+}
+#add-book {
+  cursor: pointer;
+}
+// #body {
+//   display: block;
+//   margin: 0 auto 0.25 auto;
+//   padding: 0.25rem;
+// }
+#add {
+  cursor: pointer;
+}
+#survey-form {
+  background: rgb(107, 124, 145);
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  padding: 2.5rem 2.5rem;
+  border-radius: 2rem;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 25%;
+  display: none;
+}
+#surclose {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+#modal_book {
+  padding: 20px;
+  // width: 50%;
+  // border: 1px solid red;
+}
+#edit-aut{
+  cursor: pointer;
+}
+#delete-aut{
+  cursor: pointer;
+}
+.submit-button {
+  width: 20%;
+  padding: 0.75rem;
+  background: green;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.input-design {
+  display: block;
+  width: 30%;
+  height: 2rem;
+  padding: 0.75rem;
+  background-color: #ffff;
+  border: 2px solid #573f94;
+  border-radius: 0.75rem;
+  margin: 0 auto;
+}
+#linear {
+  text-align: left;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+
+  p {
+    width: 100%;
+  }
+}
+#comment {
+  width: 60%;
+  height: 10%;
+}
+#bio{
+  width: 60%;
+  height: 10%;
+}

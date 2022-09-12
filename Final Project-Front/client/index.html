@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./nav.js" defer></script>
+    <script src="./script.js" defer></script>
+    <title>Bookstore</title>
+  </head>
+  <body>
+
+<div class="loader">
+  <img src="./assets/img/loader-img.gif" alt="loader-img">
+</div>
+<div id="notification-container"></div>
+
+<div class="container">
+    <h1>Notifications</h1>
+    <button id="success-btn">Success</button>
+    <button id="error-btn">Error</button>
+    <button id="info-btn">Info</button>
+    <button id="warning-btn">Warning</button>
+</div>
+    <div class="wrapper">    
+      <div class="login-sign">
+        <i class="fa-solid fa-xmark"></i>
+          <section class="forms-section">
+            <div class="forms">
+              <div class="form-wrapper is-active">
+                <button type="button" class="switcher switcher-login">
+                  Login
+                  <span class="underline"></span>
+                </button>
+                <form class="form form-login">
+                  <fieldset>
+                    <legend>Please, enter your email and password for login.</legend>
+                    <div class="input-block">
+                      <label for="login-email">E-mail</label>
+                      <input id="login-email" type="email" required>
+                    </div>
+                    <div class="input-block">
+                      <label for="login-password">Password</label>
+                      <input id="login-password" type="password" required>
+                    </div>
+                  </fieldset>
+                  <button type="submit" class="btn-login">Login</button>
+                </form>
+              </div>
+              <div class="form-wrapper">
+                <button type="button" class="switcher switcher-signup">
+                  Sign Up
+                  <span class="underline"></span>
+                </button>
+                <form class="form form-signup">
+                  <fieldset> 
+                    <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+                    <div class="input-block">
+                      <label for="name">Name</label>
+                      <input id="name" required>
+                    </div>
+                    <div class="input-block">
+                      <label for="surname">Surname</label>
+                      <input id="surname" required>
+                    </div>
+                    <div class="input-block">
+                      <label for="signup-email">E-mail</label>
+                      <input id="signup-email" type="email" required>
+                    </div>
+                    <div class="input-block">
+                      <label for="signup-password">Password</label>
+                      <input id="signup-password" type="password" required>
+                    </div>
+                    
+                  </fieldset>
+                  <button type="submit" class="btn-signup">Continue</button>
+                </form>
+              </div>
+            </div>
+          </section>
+          </div>
+           <div class="header">
+            <div class="navbar">
+              <div class="navbar__wrapper">
+                <nav class="navbar__menu"><a class="navbar__brand" href="./index.html">
+                <img id="navimg"  src="./assets/img/logo.jpg" alt=""/></a>
+                  <div id="nav-icon3">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <ul id="dashadd" class="navbar__nav">
+                    <li class="navbar__link after-transform"><a class="active" href="./books.html">Books</a></li>
+                    <li class="navbar__link after-transform"><a href="./authors.html">Authors</a></li>
+                    <li class="navbar__link after-transform"><a href="#"><i class="fa-solid fa-user-tie"></i></a></li>
+                    <li class="navbar__link after-transform" id="logout"><a href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                   
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="navbar-responsive">
+              <ul class="navbar-responsive__nav">
+                <li class="navbar-responsive__link after-transform">
+                <a class="active" href="#">Inicio</a>
+                </li>
+                <li class="navbar-responsive__link after-transform"><a href="#">Nosotros</a></li>
+                <li class="navbar-responsive__link after-transform"><a href="#">Galeria</a></li>
+                <li class="navbar-responsive__link after-transform"><a href="#">Blog</a></li>
+                <li class="navbar-responsive__link after-transform"><a href="#">Contacto</a></li>
+              </ul>
+            </div>
+            </div>
+             <section class="home" id="home">
+
+            <div class="row">
+        
+                <div class="content">
+                    <h3>In The Press</h3>
+                    <p>I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are.</p>
+                  <h4>JAYDEN ADAMS,
+
+                    </h4>
+                    <h5>San Francisco Daily</h5>
+                </div>
+        
+                <div id="sweip"  class="swiper books-slider">
+                    <div id="swiper"   class="swiper-wrapper">
+                        <!-- <a href="#" class="swiper-slide"><img src="./assets/img/book-1.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/book-2.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/book-3.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/book-4.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/book-5.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/book-6.png" alt=""></a> -->
+                    </div>
+                   
+      
+                    <img src="./assets/img/stand.png" class="stand" alt="">
+              </div>
+               
+        
+              </section>
+      <div class="book-selection" id="first-3">
+        <div class="selling-h1"><h1>Top Selling</h1></div>
+
+      </div>
+      
+      <div class="autslogan"><h1 class="authors__heading">Authors</h1></div>
+      <div id="authors">
+
+      </div> 
+      <footer class="footer-distributed">
+
+        <div class="footer-left">
+      
+          <h3>Liba<span>book</span></h3>
+      
+          <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+            <a href="#">Blog</a>
+          
+            <a href="#">Pricing</a>
+          
+            <a href="#">About</a>
+            
+            <a href="#">Faq</a>
+            
+            <a href="#">Contact</a>
+          </p>
+      
+          <p class="footer-company-name">Libabook © 1991</p>
+        </div>
+      
+        <div class="footer-center">
+      
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>31/23 S.S.Akhundov st</span> Binagadi, Baku</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+994557623800</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@libabook.com</a></p>
+          </div>
+      
+        </div>
+      
+        <div class="footer-right">
+      
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Libabook (libabook.com) is a leading international book retailer with a unique offer -- over 20 million books and free delivery worldwide (with no minimum spend).
+
+We ship thousands of books every day from our fulfillment centres in Gloucester, United Kingdom, and Melbourne, Australia, to more than 130 countries across the world -- displaying prices in 37 different local currencies.
+
+Our vision is to provide “All Books Available to All” by improving selection, access and affordability of books.
+          </p>
+      
+          <div class="footer-icons">
+      
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+      
+          </div>
+      
+        </div>
+      
+      </footer>
+    </div>
+    
+  
+ 
+    
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  </body>
+</html>
